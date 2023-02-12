@@ -1,0 +1,17 @@
+{
+  "name": "PreetiBhojan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build-css": "npx tailwindcss-cli build -i src/index.css -o public/styles.css -w",
+    "watch": "npx tailwindcss -i ./src/index.css -o ./public/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/public/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="index.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="h-full w-full font-Cinzel">
+      <nav class="flex items-center p-3 flex-wrap px-auto lg:px-32">
+        <div class="">
+          <a href="#" class="p-2 mr-4 gap-4 inline-flex items-center">
+            <img src="/assets/icon.png" class="h-8 w-8 lg:h-12 lg:w-12" />
+            <img src="/assets/logo2.png" class="hidden lg:block lg:h-10 lg:w-44 lg:mt-4" />
+          </a>
+        </div>
+        <button
+          class="text-black inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+          data-target="#navigation"
+        >
+          <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>            
+          </div>
+        </button>
+        <div
+          class="hidden top-navbar w-full lg:inline-flex lg:mr-20 lg:flex-grow lg:w-auto"
+          id="navigation"
+        >
+          <div
+            class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
+          >
+            <a
+              href="index.html"
+              class="lg:inline-flex text-xl  lg:w-auto w-full px-3 py-2 rounded text-gray-900 items-center justify-center hover:text-green-800 hover:underline"
+            >
+              <span>Home</span>
+            </a>
+            <a
+              href="about.html"
+              class="lg:inline-flex text-xl lg:w-auto w-full px-3 py-2 rounded text-gray-900 items-center justify-center hover:text-green-800 hover:underline"
+            >
+              <span>About</span>
+            </a>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="container mx-auto px-6 py-10 pt-10 font-Satoshi text-lg text-gray-900">
+
+        <div class="md:px-28"> 
+        <p class="font-Cinzel text-3xl">About Us</p>
+
+        <p class="mt-10 dark:text-gray-300">
+        Shakunt Foods is a proprietory firm established in the year 2015 with a vision to serve Home Made, Hygienic Food to Corporate Employees.
+        Since then, Preeti Bhojan (a Brand of Shakunt Foods) has become an epitome of Homely Cuisine. It is one of the promising names in the catering business and the food we serve is exceedingly popular among the people from all walks of life. Especially the employees from a number of industrial and commercial establishments prefer to have our food during working hours.      </p>
+
+        <p class="py-10">We serve Pure Veg food which comes with the following inherent qualities:</p>
+
+        <ul class="list-disc pl-10">
+            <li>Made in Hygienic conditions with Farm Fresh Vegetables</li>
+            <li>Packaged in Food Grade, Leak Proof, Microwave Safe, Biodegradable Plastic Container</li>
+            <li>Lavish Menu</li>
+            <li>Reasonable Cost</li>
+        </ul>
+
+        <p class="py-10">We offer Premium Tiffin Service on a regular basis and leave no room for complaints on account of delay or unhygenic service.
+Our Proprietor Mrs. Preetisha Ruparel is a Master Chef and Backbone of our Business.</p>
+
+        </div>
+    </section>
+
+  </body>
+
+  <script>
+    function goToBottom(){
+    var elem = document.getElementById("promotion");
+    elem.scrollIntoView({behavior:'smooth'});
+}
+
+  $(document).ready(function() {
+      $(".nav-toggler").each(function(_, navToggler) {
+        var target = $(navToggler).data("target");
+        $(navToggler).on("click", function() {
+          $(target).animate({
+            height: "toggle"
+          });
+        });
+      });
+  });
+</script>
+</html>

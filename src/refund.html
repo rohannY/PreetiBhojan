@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/public/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+    <div class="h-full w-full font-Cinzel">
+      <nav class="flex items-center p-3 flex-wrap px-auto lg:px-32">
+        <div class="">
+          <a href="#" class="p-2 mr-4 gap-4 inline-flex items-center">
+            <img src="/assets/icon.png" class="h-8 w-8 lg:h-12 lg:w-12" />
+            <img src="/assets/logo2.png" class="hidden lg:block lg:h-10 lg:w-44 lg:mt-4" />
+          </a>
+        </div>
+        <button
+          class="text-black inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+          data-target="#navigation"
+        >
+          <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>            
+          </div>
+        </button>
+        <div
+          class="hidden top-navbar w-full lg:inline-flex lg:mr-20 lg:flex-grow lg:w-auto"
+          id="navigation"
+        >
+          <div
+            class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
+          >
+            <a
+            href="index.html"
+            class="lg:inline-flex text-xl  lg:w-auto w-full px-3 py-2 rounded text-gray-900 items-center justify-center hover:text-green-800 hover:underline"
+            >
+              <span>Home</span>
+            </a>
+            <a
+              href="about.html"
+              class="lg:inline-flex text-xl lg:w-auto w-full px-3 py-2 rounded text-gray-900 items-center justify-center hover:text-green-800 hover:underline"
+            >
+              <span>About</span>
+            </a>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="container md:mx-auto px-6 py-10 pt-10 font-Satoshi text-lg text-gray-900">
+
+        <div class="md:px-28"> 
+        <p class="font-Cinzel text-3xl">Cancellation and Refund Policy</p>
+
+        <p class="mt-10 dark:text-gray-300">
+            Due to the nature of goods provided, we cannot initiate refund after preparation of tiffin. You can however choose to cancel further orders and get a refund for the tiffin’s not delivered. 
+        </p>
+
+        <p class="py-5">Our policy for cancellation and refund will be as follows:</p>
+        
+        <span class="font-bold text-black font-Inter">Cancellation Pollicy</span>
+
+        <ul class="list-disc py-5 px-10">
+            <li>Tiffin’s need to be cancelled before a specified time defined in our application. We reserve the right to change the time before which you can cancel tiffin.</li>
+            <li>The amount of cancelled tiffin’s is added to your credit which can be utilized in future orders or can be refunded.</li>
+        </ul>
+
+        <span class="font-bold text-black font-Inter">Refund Pollicy</span>
+
+        <p class="pt-5 pb-2">The money available in credit can be refunded by UPI or NEFT.</p>
+        <p class="py-2">The rules of refunds are as follows:</p>
+
+        <ol class="list-decimal py-2 px-10">
+            <li>If the number of meals in a month is less than 12, then the calculation of meals will be as per the need based customer and the difference will be deducted from credit/deposit.</li>
+            <li>The amount will be refunded after due checking within 7 working days.</li>
+        </ul>
+        </div>
+    </section>
+
+  </body>
+
+  <script>
+    function goToBottom(){
+    var elem = document.getElementById("promotion");
+    elem.scrollIntoView({behavior:'smooth'});
+}
+
+  $(document).ready(function() {
+      $(".nav-toggler").each(function(_, navToggler) {
+        var target = $(navToggler).data("target");
+        $(navToggler).on("click", function() {
+          $(target).animate({
+            height: "toggle"
+          });
+        });
+      });
+  });
+</script>
+</html>
