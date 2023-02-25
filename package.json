@@ -6,8 +6,13 @@
   "dependencies": {
     "tailwindcss": "^3.2.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss-import": "^15.1.0",
+    "vite": "^4.1.4"
+  },
   "scripts": {
+    "dev":"vite",
     "build-css": "npx tailwindcss-cli build -i src/index.css -o public/styles.css -w",
     "watch": "npx tailwindcss -i ./src/index.css -o ./public/styles.css"
   },
