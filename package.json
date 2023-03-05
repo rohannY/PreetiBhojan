@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "vite",
     "build-css": "npx tailwindcss-cli build -i src/index.css -o public/styles.css -w",
-    "watch": "npx tailwindcss -i ./src/index.css -o ./public/styles.css"
+    "watch": "npx tailwindcss -i ./src/index.css -o ./public/styles.css -w"
   },
   "keywords": [],
   "author": "",
